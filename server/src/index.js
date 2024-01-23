@@ -40,8 +40,6 @@ app.use(cookieParser());
 
 cleanFolder();
 
-console.log(process.env.name);
-
 app.use(express.static(path.join(__dirname, '..', '..', 'client', 'build')));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'build', 'client', 'index.html'));
