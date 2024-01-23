@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* main */
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* box */
+.box {
+  position: relative;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 0 0 10px #909090;
+  box-shadow: 0 0 10px #909090;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 10px;
+  width: 600px;
+  height: 650px;
+  overflow: scroll;
+}
+
+/* post */
+.post > .image {
+  width: 150px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.post {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px;
+  padding: 2px 5px 6px 5px;
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+.button-control {
+  position: absolute;
+  right: 1px;
+}
+.remove-btn {
+  margin: 5px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 40px;
+}
+.postDetails {
+  line-height: 30px;
+}
+
+/* selected post details */
+
+.image-wrapper {
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  margin: 6px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.selected-post-details {
+  line-height: 30px;
+}
+.selected-post-details > p {
+  font-size: large;
+}
+
+.post-container,
+.register,
+.login {
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0.5rem;
+}
+
+.post-form,
+.register-form,
+.login-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.post-form > input,
+.register-form > input,
+.login-form > input {
+  height: 40px;
+  font-size: large;
+  margin: 5px;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+}
+
+.post-form > input:focus,
+.register-form > input:focus,
+.login-form > input:focus {
+  outline: none;
+}
+
+.post-form > button,
+.register-form > button,
+.login-form > button {
+  font-size: x-large;
+  margin: 5px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 40px;
+  background-color: rgb(230, 230, 230);
+}
+
+.logout-btn:hover,
+.post-form > button:hover,
+.register-form > button:hover,
+.login-form > button:hover {
+  background-color: rgb(200, 200, 200);
+}
+
+.post-form > button:active,
+.login-link,
+.register-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.post-form > textarea {
+  width: inherit;
+  font-size: large;
+  margin: 5px;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+}
+.post-form > textarea:focus {
+  outline: none;
+}
+
+/* navbar */
+.navbar {
+  height: 80px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.192);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+}
+.logo {
+  font-size: x-large;
+  font-weight: 900;
+}
+.query-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.query-div > input {
+  height: 30px;
+  min-width: 250px;
+  max-width: 500px;
+  font-size: large;
+  padding: 5px;
+  margin: 5px 20px 5px 0px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  background-color: #dddddd7e;
+}
+.query-div > input:focus {
+  outline: none;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  margin: 5px;
+}
+a {
+  color: inherit;
+}
+/* logout button's div */
+.logout-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.logout-btn {
+  font-size: large;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 40px;
+  width: 550px;
+  background-color: rgb(230, 230, 230);
+}
+
+/* notifications-text */
+.notifications {
+  position: fixed;
+  display: flex;
+  top: 80px;
+  right: 50%;
+  padding: 15px;
+  min-width: 250px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(50%);
+  background-color: rgb(255, 240, 207);
+}
+
+.empty {
+  position: absolute;
+  top: 30%;
+  right: 45%;
+  font-size: x-large;
+}
+.up-to-5-images {
+  font-size: large;
+  margin: 5px;
+  color: gray;
+}

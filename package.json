@@ -1,0 +1,24 @@
+{
+  "name": "rentnow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client_depends": "cd client && npm install",
+    "server_depends": "cd server && npm install",
+    "install_depends": "npm run client_depends && npm run server_depends",
+    
+    "client": "cd client && npm run start",
+    "server": "cd server && npm run start",
+
+    "start": "npm install && npm run install_depends && concurrently \"npm run client\" \"npm run server\"",
+    "build": "npm run install_depends && cd client && npm run build",
+    "live": "npm run server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
