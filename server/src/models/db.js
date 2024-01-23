@@ -4,11 +4,7 @@ const URI = process.env.URI;
 
 async function connectDB() {
   await mongoose
-    .connect(URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-    })
+    .connect(URI, {})
     .then(() => {
       console.log('connected to database');
     })
